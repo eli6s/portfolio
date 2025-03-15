@@ -1,0 +1,157 @@
+* {
+  box-sizing: content-box;
+}
+
+/* make math bigger */
+.katex {
+  font-size: 1.75em;
+}
+
+.line.highlighted {
+  background-color: rgba(175, 175, 255, 0.15);
+  width: 100%;
+  display: inline-block;
+}
+
+/* Works on Firefox */
+pre {
+  scrollbar-width: auto;
+  scrollbar-color: #fff #00000000;
+}
+
+.markdown ul {
+  list-style-type: '- ';
+  padding-left: 1.25rem;
+}
+.markdown li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+/* .markdown.dropcap > p:first-of-type::first-letter {
+  font-size: 6.5rem;
+  float: left;
+  padding: 7px 5px 0 0;
+  font-weight: 700;
+  font-style: normal;
+  font-family: var(--font-sans);
+} */
+.markdown ol {
+  padding-left: 1.75rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  text-decoration-line: none;
+}
+
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+  color: inherit;
+}
+
+.hovershine::before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.hovershine:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.react-transform-wrapper,
+.react-transform-component {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.toc-line path {
+  transition: all 0.3s ease;
+}
+
+ul.contains-task-list {
+  margin-left: 1.75rem;
+  padding-left: 0.2rem;
+  list-style-type: none;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  margin-left: -1.75rem;
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  box-shadow: inset 1em 1em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  opacity: 0;
+}
+
+input[type='checkbox']:checked::before {
+  opacity: 1;
+}
+
+td {
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+}
+
+table {
+  border-collapse: separate;
+}
+
+thead {
+  display: none;
+}
+
+th, td {
+  border: 1px solid;
+  border-color: #322e40;
+}
+
+.selected::before {
+  content: '[ ';
+}
+.selected::after {
+  content: ' ]';
+}

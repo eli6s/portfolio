@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply mb-2 mt-10 text-3xl font-bold;
+  }
+  h3 {
+    @apply mb-2 mt-6 text-2xl font-bold;
+  }
+  h4 {
+    @apply mb-2 mt-4 text-xl font-bold;
+  }
+  p {
+    @apply my-4 leading-7;
+  }
+  blockquote {
+    @apply fg-muted border-l-2 pl-4 italic;
+  }
+  a {
+    @apply hover:accent underline underline-offset-2;
+  }
+  pre {
+    @apply bg-[#21222c];
+  }
+  code {
+    @apply fg-code rounded-sm bg-[#312e3f] px-1.5 py-0.5;
+  }
+  pre code {
+    @apply bg-transparent p-0 font-normal;
+  }
+  ol {
+    @apply list-decimal;
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    @apply bg-[#ffffff] dark:bg-[#15131d];
+  }
+
+  .bg-secondary {
+    @apply bg-gray-400 dark:bg-[#1c1a27];
+  }
+
+  .fg-bright {
+    @apply text-[#000] dark:text-[#ffffff];
+  }
+
+  .fg-primary {
+    @apply text-[#333333] dark:text-[#e1e1e1];
+  }
+
+  .fg-muted {
+    @apply text-[#33333396] dark:text-[#8B8C9B];
+  }
+
+  .fg-code {
+    @apply text-[#ffffff];
+  }
+
+  .accent {
+    @apply text-[#ec551a] dark:text-[#ff6497];
+  }
+
+  .highlight {
+    @apply text-black dark:text-white;
+  }
+
+  .muted-border {
+    @apply border-[#414868] dark:border-[#5a5766];
+  }
+}
